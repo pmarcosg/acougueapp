@@ -3,141 +3,81 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>OFERTAS E PROMOÇÕES</title>
+<title>AçougueApp - Ofertas</title>
 
 <style>
 body {
-    font-family: Arial, sans-serif;
-    background-color: #F5F5F5;
-    margin: 0;
-    padding: 15px;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f4f4f4;
+}
+
+header {
+  background: #c40000;
+  color: white;
+  text-align: center;
+  padding: 20px;
 }
 
 h1 {
-    background: linear-gradient(90deg, #C62828, #FF7043);
-    color: white;
-    text-align: center;
-    padding: 20px;
-    border-radius: 10px;
+  margin: 0;
+}
+
+.container {
+  padding: 20px;
+}
+
+.campo-busca {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
 }
 
 .categoria {
-    background: white;
-    margin-top: 20px;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+  margin-bottom: 30px;
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
-h2 {
-    color: #8E0000;
-    border-bottom: 2px solid #C62828;
-    padding-bottom: 5px;
+.categoria h2 {
+  margin-top: 0;
+  color: #c40000;
 }
 
 .item {
-    display: flex;
-    justify-content: space-between;
-    padding: 8px 0;
-    border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
 }
 
 .item:last-child {
-    border-bottom: none;
+  border-bottom: none;
 }
 
 .preco {
-    font-weight: bold;
-    color: #2E7D32;
+  font-weight: bold;
+  color: #2e7d32;
 }
 </style>
-
 </head>
+
 <body>
 
-<h1>OFERTAS E PROMOÇÕES</h1>
+<header>
+<h1>🥩 AçougueApp - Ofertas da Cidade</h1>
+</header>
 
-<div class="categoria">
-<h2>Açougue Brasão</h2>
-<h2>Bovinas</h2>
+<div class="container">
 
-<div class="item"><span>Alcatra</span><span class="preco">R$ 46,90/kg</span></div>
-<div class="item"><span>Almôndega</span><span class="preco">R$ 21,90/kg</span></div>
-<div class="item"><span>Acém e músculo dianteiro</span><span class="preco">R$ 27,90/kg</span></div>
-<div class="item"><span>Capa de contra filé</span><span class="preco">R$ 33,90/kg</span></div>
-<div class="item"><span>Churrascão</span><span class="preco">R$ 31,90/kg</span></div>
-<div class="item"><span>Contra filé</span><span class="preco">R$ 48,90/kg</span></div>
-<div class="item"><span>Costela Ripa</span><span class="preco">R$ 22,90/kg</span></div>
-<div class="item"><span>Costela Gaúcha</span><span class="preco">R$ 23,90/kg</span></div>
-<div class="item"><span>Coxão duro</span><span class="preco">R$ 36,90/kg</span></div>
-<div class="item"><span>Coxão mole</span><span class="preco">R$ 41,90/kg</span></div>
-<div class="item"><span>Cupim A</span><span class="preco">R$ 62,90/kg</span></div>
-<div class="item"><span>Fígado Bovino</span><span class="preco">R$ 18,90/kg</span></div>
-<div class="item"><span>Fraldinha</span><span class="preco">R$ 46,90/kg</span></div>
-<div class="item"><span>Filé mignon</span><span class="preco">R$ 79,90/kg</span></div>
-<div class="item"><span>Lagarto</span><span class="preco">R$ 39,90/kg</span></div>
-<div class="item"><span>Maça de peito</span><span class="preco">R$ 34,90/kg</span></div>
-<div class="item"><span>Paletão</span><span class="preco">R$ 37,90/kg</span></div>
-<div class="item"><span>Peixinho</span><span class="preco">R$ 32,90/kg</span></div>
-<div class="item"><span>Paleta</span><span class="preco">R$ 32,90/kg</span></div>
-<div class="item"><span>Patim</span><span class="preco">R$ 39,90/kg</span></div>
-<div class="item"><span>Ponta de picanha</span><span class="preco">R$ 36,90/kg</span></div>
-<div class="item"><span>Picanha bovina</span><span class="preco">R$ 74,90/kg</span></div>
-<div class="item"><span>Quibe</span><span class="preco">R$ 29,90/kg</span></div>
-<div class="item"><span>Ossobuco</span><span class="preco">R$ 28,90/kg</span></div>
+<input type="text" id="pesquisa" placeholder="🔎 Pesquisar carne..." onkeyup="filtrarItens()" class="campo-busca">
 
-</div>
-
-<div class="categoria">
-<h2>Suínas</h2>
-
-<div class="item"><span>Bacon</span><span class="preco">R$ 39,90/kg</span></div>
-<div class="item"><span>Calabresa</span><span class="preco">R$ 26,90/kg</span></div>
-<div class="item"><span>Costelinha</span><span class="preco">R$ 25,90/kg</span></div>
-<div class="item"><span>Lombo</span><span class="preco">R$ 23,90/kg</span></div>
-<div class="item"><span>Miúdos para Feijoada</span><span class="preco">R$ 15,90/kg</span></div>
-<div class="item"><span>Paleta sem osso</span><span class="preco">R$ 19,90/kg</span></div>
-<div class="item"><span>Pernil desossado</span><span class="preco">R$ 19,90/kg</span></div>
-<div class="item"><span>Pernil c/ osso</span><span class="preco">R$ 19,90/kg</span></div>
-<div class="item"><span>Suã comum</span><span class="preco">R$ 6,90/kg</span></div>
-<div class="item"><span>Suã especial</span><span class="preco">R$ 12,90/kg</span></div>
-<div class="item"><span>Toucinho para banha</span><span class="preco">R$ 12,90/kg</span></div>
-<div class="item"><span>Toucinho barriga</span><span class="preco">R$ 26,90/kg</span></div>
-<div class="item"><span>Orelha c/ máscara</span><span class="preco">R$ 12,90/kg</span></div>
-<div class="item"><span>Orelha s/ máscara</span><span class="preco">R$ 19,90/kg</span></div>
-<div class="item"><span>Pezinho</span><span class="preco">R$ 14,90/kg</span></div>
-<div class="item"><span>Rabinho</span><span class="preco">R$ 23,90/kg</span></div>
-<div class="item"><span>Suíno serrado</span><span class="preco">R$ 16,90/kg</span></div>
-<div class="item"><span>Pele suína para feijoada</span><span class="preco">R$ 5,90/kg</span></div>
-
-</div>
-
-<div class="categoria">
-<h2>Frango</h2>
-
-<div class="item"><span>Asa completa</span><span class="preco">R$ 16,90/kg</span></div>
-<div class="item"><span>Coxa sobrecoxa</span><span class="preco">R$ 10,90/kg</span></div>
-<div class="item"><span>Coxinha da asa</span><span class="preco">R$ 17,90/kg</span></div>
-<div class="item"><span>Filé de frango</span><span class="preco">R$ 25,90/kg</span></div>
-<div class="item"><span>Frango a passarinho</span><span class="preco">R$ 15,90/kg</span></div>
-<div class="item"><span>Frango inteiro</span><span class="preco">R$ 13,90/kg</span></div>
-<div class="item"><span>Peito com osso</span><span class="preco">R$ 15,90/kg</span></div>
-<div class="item"><span>Tulipa</span><span class="preco">R$ 25,90/kg</span></div>
-
-</div>
-
-<div class="categoria">
-<h2>Linguiças</h2>
-
-<div class="item"><span>Linguiça toscana Aurora</span><span class="preco">R$ 22,90/kg</span></div>
-<div class="item"><span>Linguiça toscana Perdigão</span><span class="preco">R$ 24,90/kg</span></div>
-<div class="item"><span>Linguiça apimentada</span><span class="preco">R$ 21,90/kg</span></div>
-<div class="item"><span>Linguiça Super Frango</span><span class="preco">R$ 22,90/kg</span></div>
-<div class="item"><span>Linguiça de frango (fina)</span><span class="preco">R$ 26,90/kg</span></div>
-<div class="item"><span>Linguiça de pernil (fina)</span><span class="preco">R$ 26,90/kg</span></div>
-<div class="item"><span>Linguiça de pernil (grossa)</span><span class="preco">R$ 20,90/kg</span></div>
-<div class="item"><span>Linguiça de lombo com queijo</span><span class="preco">R$ 36,90/kg</span></div>
-
+<!-- ANGELINA CARNES -->
 <div class="categoria">
 <h2>Angelina Carnes</h2>
 
@@ -159,7 +99,7 @@ h2 {
 <div class="item"><span>Rabada Bovina</span><span class="preco">R$ 39,98/kg</span></div>
 </div>
 
-
+<!-- CASA DE CARNES CONQUISTA -->
 <div class="categoria">
 <h2>Casa de Carnes Conquista</h2>
 
@@ -187,8 +127,26 @@ h2 {
 <div class="item"><span>Bisteca</span><span class="preco">R$ 21,99/kg</span></div>
 <div class="item"><span>Lombo</span><span class="preco">R$ 24,99/kg</span></div>
 <div class="item"><span>Miúdos para Feijoada</span><span class="preco">R$ 14,99/kg</span></div>
+</div>
 
 </div>
+
+<script>
+function filtrarItens() {
+  let input = document.getElementById("pesquisa");
+  let filtro = input.value.toLowerCase();
+  let itens = document.querySelectorAll(".item");
+
+  itens.forEach(function(item) {
+    let texto = item.innerText.toLowerCase();
+    if (texto.includes(filtro)) {
+      item.style.display = "flex";
+    } else {
+      item.style.display = "none";
+    }
+  });
+}
+</script>
 
 </body>
 </html>
